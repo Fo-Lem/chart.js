@@ -22,6 +22,9 @@
   },
   "include": ["src/**/*.ts", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }],
+  "paths": {
+    "@/*": ["src/*"]
+  },
   "exclude": [
     "./dist",
     "./.quasar",
