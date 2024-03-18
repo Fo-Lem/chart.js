@@ -4,15 +4,12 @@ import {
   RouteLocationNormalized,
   RouteRecordRaw,
 } from 'vue-router';
-import Default from '../layouts/Default.vue';
-import Empty from '../layouts/Empty.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Main',
     meta: {
-      layout: Default,
       requiredAuth: false,
     },
     redirect: { name: 'Dashboard' },
@@ -21,17 +18,17 @@ const routes: Array<RouteRecordRaw> = [
         path: '/login',
         name: 'Login',
         meta: {
-          layout: Empty,
+          layout: 'Empty',
           requiredAuth: false,
           title: 'Вход',
         },
-        component: () => import('../views/Dashboard.vue'),
+        component: () => import('../views/Login.vue'),
       },
       {
         path: '/dashboard',
         name: 'Dashboard',
         meta: {
-          layout: Default,
+          layout: 'Default',
           requiredAuth: false,
           title: 'Главная',
         },
@@ -41,7 +38,7 @@ const routes: Array<RouteRecordRaw> = [
         path: '/about',
         name: 'About',
         meta: {
-          layout: Default,
+          layout: 'Default',
           requiredAuth: false,
           title: 'О проекте',
         },
