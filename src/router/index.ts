@@ -30,9 +30,19 @@ const routes: Array<RouteRecordRaw> = [
         meta: {
           layout: 'Default',
           requiredAuth: false,
-          title: 'Главная',
+          title: 'Общие показатели',
         },
         component: () => import('../views/Dashboard.vue'),
+      },
+      {
+        path: '/personalDashboard',
+        name: 'PersonalDashboard',
+        meta: {
+          layout: 'Default',
+          requiredAuth: false,
+          title: 'Мои показатели',
+        },
+        component: () => import('../views/PersonalDashboard.vue'),
       },
       {
         path: '/about',
