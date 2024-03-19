@@ -12,7 +12,7 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       requiredAuth: false,
     },
-    redirect: { name: 'Dashboard' },
+    redirect: { name: 'Login' },
     children: [
       {
         path: '/login',

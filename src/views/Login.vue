@@ -33,7 +33,7 @@ const router = useRouter();
 const onSubmit = () => {
   if (email.value && password.value) {
     localStorage.setItem('email', email.value);
-    router.push('/');
+    router.push('/dashboard');
   }
 };
 
